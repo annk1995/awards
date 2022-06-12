@@ -1,13 +1,11 @@
 # Moringa Awards
-A Django python application that allows a user to post a project they have created and get it reviewed by others.
 
-#### By **Philip Kariuki**
+
+#### By 
 
 
 ## Description
-The objective here is to create an application that allows a user to post a project he/she has created and get it reviewed by his/her peers.
 
-Live link : https://moringaawardz.herokuapp.com
 
 ## User Stories
 As a user, I would like to be able to do the following:
@@ -29,7 +27,7 @@ As a user, I would like to be able to do the following:
 ## Setup/Installation Requirements
 To clone this repo, open terminal in your desired folder then run:
 
-        $ git clone https://github.com/philipkariuki/moringa-awards/
+        $ git clone 
         $ cd /moringa-awards
 
 To create and activate the virtual environment and install pip:
@@ -69,10 +67,10 @@ No known bugs
 
 
 ## Contributors
-<a href="https://github.com/philipkariuki">philipkariuki</a>
+
 
 ## Support and contact details
 To support me, you can contact me at <a href="https://www.gmail.com">philippokar@hotmail.co.uk</a>
 
 ## License
-[MIT © 2019](https://github.com/philipkariuki/moringa-awards/blob/master/LICENSE)
+
