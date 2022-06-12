@@ -1,0 +1,51 @@
+{% extends 'base.html'%}
+{% load bootstrap3 %}
+
+
+
+{% block content%}
+
+{% for comments in comments_list%}
+
+
+ <style>
+      
+      .list-group {
+        font-size: 19px;
+
+      }
+
+     
+
+    </style>
+  <ul class="list-group">
+  <li class="list-group-item list-group-item-info">
+    {{comments.comments_id}}
+    <br><br>
+  </li>
+</ul>
+{% endfor%}
+
+
+
+
+
+
+<div class="container">
+
+  <div class="row">
+    
+    <div class="col-sm-8">
+      <form action="{%url 'new_comment'%}" method="post" enctype="multipart/form-data">
+      {%csrf_token%} {% bootstrap_form form %}
+      <form action="{%url 'new_comment'%}" method="post" enctype="multipart/form-data">
+      <button type="submit" class="btn btn-success">Comment</button>
+      </form>
+    </div>
+
+
+  </div>
+  
+</div>
+{% endblock %}
+

@@ -1,0 +1,122 @@
+{% extends 'base.html'%}
+{% load bootstrap3%}
+{% load static%}
+
+
+{%block content%}
+{{block.super}}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/starrr.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="{% static 'js/starrr.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    
+</head>
+
+
+{% for image in project %}
+
+<div class="container">
+    <div class="card">
+        <div class="row">
+                <div class="col-lg-8">
+                    <a href="{{image.projimage.url}}" data-toggle="demolightbox" data-title="{{ image.title }}" data-footer="{{ image.link }}">
+                	<img src="{{image.projimage.url}}" class="img-responsive">
+            		</a>                   
+                </div>
+                <div class="col-lg-4">
+                        <h3><a href="{% url 'project' image.id %}">{{ image.title }}</a></h3>
+                        <p>{{image.description|truncatechars:500 | safe}} </p>
+                        <p>Link:  <a href="{{ image.link }} ">{{image.link}}</a> </p>
+                        <p>Posted by: {{ image.poster }} </p>
+
+                        <div class="my-rating"></div>
+							<h5>Click to rate:</h5>
+							<div class='starrr' id='star1'></div>
+							<div>&nbsp;
+							    <span class='your-choice-was' style='display: none;'>
+							  Your rating was <span class='choice'></span>.
+							    </span>
+							</div>
+
+                </div>
+        </div>
+        <div class="card-footer">
+            <p><small>{{ image.pub_date }}</small></p>
+            <h3>Comments:</h3>
+            <hr>
+
+	        <ul class="list-group">
+			  	<li class="list-group-item list-group-item-info">
+			    {{comments.comments_id}}
+			    <br><br>
+				 </li>
+			</ul>
+
+	        <hr>      
+
+	        <a class="btn btn-success btn-lg text-center" href="{% url 'new_comment' %}" style="margin-bottom: 150px"> Write a new Comment</a>
+	    </div>
+
+
+	</div>
+
+<hr>
+</div>
+
+
+<script>
+    $('#star1').starrr({
+      change: function(e, value){
+        if (value) {
+          $('.your-choice-was').show();
+          $('.choice').text(value);
+        } else {
+          $('.your-choice-was').hide();
+        }
+      }
+    });
+  </script>
+
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js.map"></script>
+
+
+
+<script type="text/javascript">
+			$(document).ready(function ($) {
+
+				// delegate calls to data-toggle="demolightbox"
+				$(document).delegate('*[data-toggle="demolightbox"]:not([data-gallery="navigateTo"])', 'click', function(event) {
+					event.preventDefault();
+					return $(this).ekkoLightbox({
+					});
+				});
+
+			});
+		</script>
+
+
+{% empty %}
+  <div class="row">
+    <h2 class="text-center">There are No Projects Posted yet</h2>
+  </div>
+{% endfor %}
+
+
+
+{% endblock%}
