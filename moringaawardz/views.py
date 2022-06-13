@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from .models import Project, Profile, Comments
 from .forms import CommentForm, ProfileUpdateForm, NewProjectForm
 from django.http  import HttpResponse, Http404, HttpResponseRedirect
-# from registration.backends.simple.views import RegistrationView
+from registration.backends.simple.views import RegistrationView
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
 
