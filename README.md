@@ -70,7 +70,7 @@ No known bugs
 
 
 ## Support and contact details
-To support me, you can contact me at <a href="https://www.gmail.com">philippokar@hotmail.co.uk</a>
+To support me, you can contact me at
 
 ## License
 
