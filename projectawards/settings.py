@@ -65,7 +65,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'e+v53e-_t3e1oja*+2s0m5*q&m(%pt%5is@_li&584=(9nfdkh'
+# SECRET_KEY = 'e+v53e-_t3e1oja*+2s0m5*q&m(%pt%5is@_li&584=(9nfdkh'
 
 
 
@@ -83,7 +83,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_registration_redux',
+    
 ]
 
 MIDDLEWARE = [
