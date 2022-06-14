@@ -77,4 +77,7 @@ No known bugs
 To support me, you can contact me at
 
 ## License
+Copyright (c) 2022 kabui kariuki
+
+
 
