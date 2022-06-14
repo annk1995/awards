@@ -1,4 +1,4 @@
-# Moringa Awards
+# Awards
 
 
 #### By kabui kariuki
@@ -14,6 +14,10 @@ As a user, I would like to be able to do the following:
 * Search for projects.
 * View projects overall score.
 * View my profile page.
+
+## Live link
+
+This this the live link:https://awwardxs.herokuapp.com/
 
 ## Specifications
 | Behaviour | Input | Output |
