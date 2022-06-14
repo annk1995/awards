@@ -17,7 +17,7 @@ As a user, I would like to be able to do the following:
 
 ## Live link
 
-This this the live link:https://awwardxs.herokuapp.com/
+This this the live link:https://reviews254.herokuapp.com/
 
 ## Specifications
 | Behaviour | Input | Output |
