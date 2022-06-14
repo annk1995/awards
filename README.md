@@ -32,7 +32,7 @@ This this the live link:https://reviews254.herokuapp.com/
 To clone this repo, open terminal in your desired folder then run:
 
         $ git clone 
-        $ cd /moringa-awards
+        $ cd /awards
 
 To create and activate the virtual environment and install pip:
 
